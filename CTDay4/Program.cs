@@ -161,5 +161,7 @@ var averagePrice = Product.Products.Average(p => p.Price);
 var CountofProducts = Product.Products.Count();
 var CountofUPads = Product.Products.Count(p => p.Name.StartsWith("uPad"));
 
+var goupredProcutsByColorName = Product.Products.GroupBy(p => new { p.Color, p.Name });
+
 
 Console.WriteLine("Execution Complete");
